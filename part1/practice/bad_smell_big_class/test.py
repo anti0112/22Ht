@@ -22,14 +22,14 @@ class ClassTestCase(SkyproTestCase):
                 hasattr(main, cls),
                 f"%@Проверьте, что вы определили класс {cls}"
             )
-        
+
     def test_class_Unit_has_expected_methods(self):
         inspected_class = main.Warrior
         expected_methods = ['attack', 'defence', 'move']
-        
+
         object_methods = [
             method_name for method_name in dir(inspected_class)
-                  if callable(getattr(inspected_class, method_name))]
+            if callable(getattr(inspected_class, method_name))]
         for method in expected_methods:
             self.assertIn(
                 method, object_methods,
@@ -39,10 +39,10 @@ class ClassTestCase(SkyproTestCase):
     def test_class_Unit_has_expected_methods(self):
         inspected_class = main.Warrior
         expected_methods = ['attack', 'defense', 'move']
-        
+
         object_methods = [
             method_name for method_name in dir(inspected_class)
-                  if callable(getattr(inspected_class, method_name))]
+            if callable(getattr(inspected_class, method_name))]
         for method in expected_methods:
             self.assertIn(
                 method, object_methods,
@@ -52,10 +52,10 @@ class ClassTestCase(SkyproTestCase):
     def test_class_Heal_has_expected_methods(self):
         inspected_class = main.Healer
         expected_methods = ['heal', 'defense', 'move']
-        
+
         object_methods = [
             method_name for method_name in dir(inspected_class)
-                  if callable(getattr(inspected_class, method_name))]
+            if callable(getattr(inspected_class, method_name))]
         for method in expected_methods:
             self.assertIn(
                 method, object_methods,
@@ -64,11 +64,11 @@ class ClassTestCase(SkyproTestCase):
 
     def test_class_Tree_has_expected_methods(self):
         inspected_class = main.Tree
-        expected_methods = ['on_fire', 'defense',]
-        
+        expected_methods = ['on_fire', 'defense', ]
+
         object_methods = [
             method_name for method_name in dir(inspected_class)
-                  if callable(getattr(inspected_class, method_name))]
+            if callable(getattr(inspected_class, method_name))]
         for method in expected_methods:
             self.assertIn(
                 method, object_methods,
@@ -77,11 +77,11 @@ class ClassTestCase(SkyproTestCase):
 
     def test_class_Trap_has_expected_methods(self):
         inspected_class = main.Trap
-        expected_methods = ['attack',]
-        
+        expected_methods = ['attack', ]
+
         object_methods = [
             method_name for method_name in dir(inspected_class)
-                  if callable(getattr(inspected_class, method_name))]
+            if callable(getattr(inspected_class, method_name))]
         for method in expected_methods:
             self.assertIn(
                 method, object_methods,

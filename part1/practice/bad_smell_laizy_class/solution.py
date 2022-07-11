@@ -17,6 +17,7 @@ class Field:
     def set_unit(self, x, y, unit: Unit):
         pass
 
+
 class Main:
     def __init__(self):
         self.field = Field()

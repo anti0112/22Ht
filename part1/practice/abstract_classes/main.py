@@ -40,6 +40,80 @@
 # код должен выполняться не выбрасывая исключений
 
 # TODO напишите Ваш код здесь
+from abc import ABC, abstractmethod
+
+
+class Transport(ABC):
+    @property
+    @abstractmethod
+    def start_engine(self):
+        pass
+
+    @property
+    @abstractmethod
+    def stop_engine(self):
+        pass
+
+    @property
+    @abstractmethod
+    def move(self):
+        pass
+
+    @property
+    @abstractmethod
+    def stop(self):
+        pass
+
+
+class Boat(Transport):
+    def start_engine(self):
+        print('Катер затарахтел')
+
+    def stop_engine(self):
+        print('Двигатель катера чихнул напоследок и заглох')
+
+    def move(self):
+        print('Катер набирает скорость')
+
+    def stop(self):
+        print('Катер остановился')
+
+
+class Car(Transport):
+    def start_engine(self):
+        print('Машина заурчала двигателем')
+
+    def stop_engine(self):
+        print('Машина с заглушенным двигателем')
+
+    def move(self):
+        print('Машина едет к цели назначения')
+
+    def stop(self):
+        print('Машина остановилась')
+
+
+class Electroscooter(Transport):
+    def start_engine(self):
+        print('Мигнул светодиодом')
+
+    def stop_engine(self):
+        print('Мигнул светодиодом дважды')
+
+    def move(self):
+        print('Прохожие в ужасе разбегаются от очередного камикадзе')
+
+    def stop(self):
+        print('Торможение об стену прошло успешно')
+
+
+class Person():
+    @staticmethod
+    def use_transport(name):
+        name.start_engine()
+        name.stop_engine()
+        name.move()
+        name.stop()
 
 
 # Отрезок кода для самопроверки.
